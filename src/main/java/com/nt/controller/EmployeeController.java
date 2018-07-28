@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.nt.dao.EmployeeDAO;
-import com.nt.dao.EmployeeDAOImpl;
 import com.nt.entity.Employee;
 
 @Controller
