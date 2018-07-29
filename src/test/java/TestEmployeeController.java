@@ -1,6 +1,3 @@
-import static org.mockito.Mockito.when;
-
-import org.jmock.Mockery;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
