@@ -14,7 +14,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	public void insertEmployee(Employee employee) {
 		
 		Configuration config=new Configuration();
-		config.configure("com/nt/config/hibernate.cfg.xml");
+		config.configure("hibernate.cfg.xml");
 		SessionFactory factory=config.buildSessionFactory();
 		Session session=factory.openSession();
 		
