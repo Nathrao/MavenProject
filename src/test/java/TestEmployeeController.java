@@ -6,7 +6,7 @@ import org.mockito.Mockito;
 
 import com.nt.controller.EmployeeController;
 import com.nt.dao.EmployeeDAO;
-import com.nt.entity.Employe;
+import com.nt.entity.Employee;
 
 public class TestEmployeeController {
 	EmployeeController controller;
