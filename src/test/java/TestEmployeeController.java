@@ -15,7 +15,7 @@ public class TestEmployeeController {
 	@Before
 	public void setUp() throws Exception {
 		controller = new EmployeeController();
-		employeeDAOImpl =Mockito.mock(EmployeeDAO.class);
+		employeeDAOImpl = Mockito.mock(EmployeeDAO.class);
 		controller.setDao(employeeDAOImpl);
 	}
 
