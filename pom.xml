@@ -62,7 +62,6 @@
 			<version>2.20.1</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-jdk14</artifactId>
@@ -78,18 +77,6 @@
 				<version>1.1</version>
 
 				<executions>
-					<execution>
-						<id>id.pre-clean</id>
-						<phase>pre-clean</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<tasks>
-								<echo>pre-clean phase</echo>
-							</tasks>
-						</configuration>
-					</execution>
 
 					<execution>
 						<id>id.clean</id>
@@ -103,18 +90,33 @@
 							</tasks>
 						</configuration>
 					</execution>
+
 					<execution>
-						<id>id.post-clean</id>
-						<phase>post-clean</phase>
+						<id>id.validate</id>
+						<phase>validate</phase>
 						<goals>
 							<goal>run</goal>
 						</goals>
 						<configuration>
 							<tasks>
-								<echo>post-clean phase</echo>
+								<echo>validate phase</echo>
 							</tasks>
 						</configuration>
 					</execution>
+
+					<execution>
+						<id>id.compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>compile phase</echo>
+							</tasks>
+						</configuration>
+					</execution>
+
 					<execution>
 						<id>id.test</id>
 						<phase>test</phase>
@@ -154,19 +156,6 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>id.pre-site</id>
-						<phase>pre-site</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<tasks>
-								<echo>pre-site phase</echo>
-							</tasks>
-						</configuration>
-					</execution>
-
-					<execution>
 						<id>id.site</id>
 						<phase>site</phase>
 						<goals>
@@ -175,32 +164,6 @@
 						<configuration>
 							<tasks>
 								<echo>site phase</echo>
-							</tasks>
-						</configuration>
-					</execution>
-
-					<execution>
-						<id>id.post-site</id>
-						<phase>post-site</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<tasks>
-								<echo>post-site phase</echo>
-							</tasks>
-						</configuration>
-					</execution>
-
-					<execution>
-						<id>id.site-deploy</id>
-						<phase>site-deploy</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<tasks>
-								<echo>site-deploy phase</echo>
 							</tasks>
 						</configuration>
 					</execution>
