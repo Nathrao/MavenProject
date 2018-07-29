@@ -1,24 +1,21 @@
-import org.jmock.Mockery;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import com.nt.controller.EmployeeController;
 import com.nt.dao.EmployeeDAO;
-import com.nt.dao.EmployeeDAOImpl;
 import com.nt.entity.Employee;
 
 public class TestEmployeeController {
 	EmployeeController controller;
 	EmployeeDAO employeeDAOImpl;
-	Mockery context;
 
 	@Before
 	public void setUp() throws Exception {
-		context = new Mockery();
 		controller = new EmployeeController();
-		employeeDAOImpl = new EmployeeDAOImpl();
+		employeeDAOImpl =Mockito.mock(EmployeeDAO.class);
 		controller.setDao(employeeDAOImpl);
 	}
 
