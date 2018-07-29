@@ -102,7 +102,6 @@
 							</tasks>
 						</configuration>
 					</execution>
-
 					<execution>
 						<id>id.post-clean</id>
 						<phase>post-clean</phase>
