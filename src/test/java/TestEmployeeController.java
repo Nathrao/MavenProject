@@ -1,3 +1,6 @@
+import static org.mockito.Mockito.when;
+
+import org.jmock.Mockery;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -6,6 +9,7 @@ import org.mockito.Mockito;
 
 import com.nt.controller.EmployeeController;
 import com.nt.dao.EmployeeDAO;
+import com.nt.dao.EmployeeDAOImpl;
 import com.nt.entity.Employee;
 
 public class TestEmployeeController {
@@ -15,7 +19,7 @@ public class TestEmployeeController {
 	@Before
 	public void setUp() throws Exception {
 		controller = new EmployeeController();
-		employeeDAOImpl = Mockito.mock(EmployeeDAO.class);
+		employeeDAOImpl =Mockito.mock(EmployeeDAO.class);
 		controller.setDao(employeeDAOImpl);
 	}
 
