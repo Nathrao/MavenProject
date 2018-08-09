@@ -6,17 +6,16 @@ import org.mockito.Mockito;
 
 import com.nt.controller.EmployeeController;
 import com.nt.dao.EmployeeDAO;
-import com.nt.dao.EmployeeDAOImpl;
 import com.nt.entity.Employee;
 
 public class TestEmployeeController {
-	EmployeeController controller;
-	EmployeeDAO employeeDAOImpl;
+	EmployeeController	controller;
+	EmployeeDAO			employeeDAOImpl;
 
 	@Before
 	public void setUp() throws Exception {
 		controller = new EmployeeController();
-		employeeDAOImpl =Mockito.mock(EmployeeDAO.class);
+		employeeDAOImpl = Mockito.mock(EmployeeDAO.class);
 		controller.setDao(employeeDAOImpl);
 	}
 
